@@ -1,0 +1,57 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="home.html" class="brand-link">
+      <img src="../admin/logo.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-4" style="opacity: .8">
+      <span class="brand-text font-weight-light">Admin Dashboard</span>
+    </a>
+    <div class="sidebar ">
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="false">
+           <li class="nav-item dropdown">
+              <a href="#" class="nav-link nav-home">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                </p>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link nav-evaluate">
+                <i class="nav-icon fas fa-th-list"></i>
+                <p>
+                  Evaluate
+                </p>
+              </a>
+            </li> 
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link nav-evaluate">
+                <i class="nav-icon fas fa-th-list"></i>
+                <p>
+                  About Us
+                </p>
+              </a>
+            </li> 
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <script>
+        $(document).ready(function(){
+        var page = '';
+            var s = '';
+        if(s!='')
+          page = page+'_'+s;
+            if($('.nav-link.nav-'+page).length > 0){
+               $('.nav-link.nav-'+page).addClass('active')
+                if($('.nav-link.nav-'+page).hasClass('tree-item') == true){
+              $('.nav-link.nav-'+page).closest('.nav-treeview').siblings('a').addClass('active')
+                    $('.nav-link.nav-'+page).closest('.nav-treeview').parent().addClass('menu-open')
+                }
+          if($('.nav-link.nav-'+page).hasClass('nav-is-tree') == true){
+            $('.nav-link.nav-'+page).parent().addClass('menu-open')
+          }
+  
+            }
+       
+        })
+    </script>
